@@ -9,6 +9,7 @@ class Solution:
         if not p and not q:
             return True
         if not q or not p:
+            # this could also be both Nones but the previous if already caught that so you are left with either is None case
             return False
         
         
