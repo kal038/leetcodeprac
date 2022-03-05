@@ -12,7 +12,8 @@ class Solution(object):
         '''
         Don't need to define an inner function because we don't have to pass extra info into it.
         Recurisve solution
-        
+        Time complexity: O(N)
+        Space Complexity: O(N) reserved on the call stack
         '''
         
         if not head or not head.next:
