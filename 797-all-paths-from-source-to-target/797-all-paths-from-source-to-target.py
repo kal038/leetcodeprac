@@ -23,6 +23,8 @@ class Solution(object):
                 
         backtrack(0, [0])
         return results
+        
+        complexity O(2^n*n) for both time and space
                 
         '''
         
