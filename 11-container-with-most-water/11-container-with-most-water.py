@@ -18,9 +18,10 @@ class Solution(object):
         l , r = 0, len(h) - 1
         ans = 0
         while (l < r):
-            ans = max(ans, min(h[l], h[r]) * (r-l))
+            curr_area = min(h[l], h[r]) * (r-l)
+            ans = max(ans, curr_area)
             if h[l]  < h[r]:
-                # want to keep the taller pillar
+                # want to keep the taller pillar, so move the left pillar to the right
                 l += 1
             else:
                 r -= 1
