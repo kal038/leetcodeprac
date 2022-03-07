@@ -1,5 +1,16 @@
 class Solution(object):
     def maxArea(self, h):
+        
+        l, r = 0 , len(h) -1 
+        ans = 0
+        while l <= r:
+            curr_area =  min(h[l], h[r]) * (r-l) 
+            ans = max(ans, curr_area)
+            if h[l] < h[r]:
+                l += 1
+            else:
+                r -= 1
+        return ans
         """
         :type height: List[int]
         :rtype: int
@@ -14,16 +25,6 @@ class Solution(object):
         '''
         '''
         """
-        if len(h) == 1: return 0
-        l , r = 0, len(h) - 1
-        ans = 0
-        while (l < r):
-            curr_area = min(h[l], h[r]) * (r-l)
-            ans = max(ans, curr_area)
-            if h[l]  < h[r]:
-                # want to keep the taller pillar, so move the left pillar to the right
-                l += 1
-            else:
-                r -= 1
-            
-        return ans  # r-l is going to produce 0 if they are on the same index
+        
+       
+       
