@@ -16,10 +16,23 @@ class Solution(object):
         Syntax:
         heapq.nlargest(k, [things to return], [sotring criteria in terms of a function called with no ()])
         '''
+        '''
+        bucket sort solution O(n) time and O(n) space
+        
+        create a list that the frequency corresponds to the indicies: [[],[],[],[], ..., []]
+                                                                        0  1  2  3        n
+        then traverse this list from right to left while adding values to a result list until len(result) == k
+        
+        
+        '''
         count = collections.Counter(nums)
-        
-        print(count.get(1))
-        print(count.get(2))
-        print(count.get(3))
-        
-        return heapq.nlargest(k, count.keys(), key = count.get) #key = [3,2,1]
+        freq = [[] for x in range(len(nums) + 1)]
+        for n, c in count.items():
+            freq[c].append(n)
+        print(freq)
+        res = []
+        for i in range(len(freq))[::-1]:
+            for n in freq[i]:
+                res.append(n)
+                if len(res) == k:
+                    return res
