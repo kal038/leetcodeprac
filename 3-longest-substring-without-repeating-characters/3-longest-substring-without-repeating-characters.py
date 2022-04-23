@@ -1,5 +1,6 @@
 class Solution:
     def lengthOfLongestSubstring(self, s: str) -> int:
+        
         chars = [0] * 128
         l = 0
         r = 0
