@@ -4,6 +4,9 @@ class Solution:
         iterative method works 
         idea:
             loop through each row starting from [[1]] and build the next row by appending [0] on both sides of curr_r
+           0 [1] 0
+          0 [1  1] 0
+         0 [1  2  1] 0
         '''
         res = [[1]]
         for i in range(numRows - 1):
