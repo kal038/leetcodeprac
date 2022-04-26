@@ -2,6 +2,6 @@ class Solution:
     def checkIfPangram(self, sentence: str) -> bool:
         '''
         O(n) solution with O(26) space
-        Have an array [0] * 26 to represent 26 letters in alphabet, unicode of letter a is 61
+        Have set of size O(26) = O(1) to check for every single letter of the alphabet
         '''
         return len(set(sentence)) == 26
