@@ -27,9 +27,9 @@ class MyHashMap:
         print(key)
         idx = key % len(self.map)
         del_idx = 0
-        print(self.map[idx])
+       
         for i in range(len(self.map[idx])):
-            print(i)
+           
             if self.map[idx][i][0] == key:
                 del_idx = i
                 del self.map[idx][del_idx]
