@@ -9,9 +9,10 @@ class Solution:
             else:
                 stack.append([s[i], 1])
         
+        #create the string from the values remaining in stack
         res = ""
-        for ch, cnt in stack:
-            res += ch*cnt
+        for char, count in stack:
+            res += char*count
         
         return res
             
