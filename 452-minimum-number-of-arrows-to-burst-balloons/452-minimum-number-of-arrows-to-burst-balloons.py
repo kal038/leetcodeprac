@@ -4,12 +4,12 @@ class Solution:
         points.sort(key = lambda x: x[1])
         
         arrows = 1
-        first_end = points[0][1]
+        last_end = points[0][1]
         
         for x_start, x_end in points:
-            if first_end < x_start:
+            if last_end < x_start: # balloon start after last_end
                 arrows += 1
-                first_end = x_end
+                last_end = x_end
                 
         return arrows
         
