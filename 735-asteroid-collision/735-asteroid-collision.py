@@ -11,6 +11,7 @@ class Solution:
                 if diff < 0:
                     #pop and append
                     stack.pop()
+                   
                     
                 elif diff > 0:
                     a = 0
