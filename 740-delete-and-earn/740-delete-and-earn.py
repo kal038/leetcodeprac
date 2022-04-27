@@ -13,7 +13,7 @@ class Solution:
             
         print(points)
         print(max_number)
-        @lru_cache
+        @cache
         def max_points(num):
             if num == 0:
                 return 0
