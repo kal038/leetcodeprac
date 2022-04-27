@@ -5,14 +5,11 @@ class Solution:
         '''
         
         points = defaultdict(int)
-        max_number = 0
+        max_number = max(nums)
         # Precompute how many points we gain from taking an element
         for num in nums:
             points[num] += num
-            max_number = max(max_number, num)
-            
-        print(points)
-        print(max_number)
+        
         @lru_cache
         def max_points(num):
             if num == 0:
