@@ -5,7 +5,7 @@ class Solution:
         '''
         
         points = defaultdict(int)
-        max_number = max(nums)
+     
         # Precompute how many points we gain from taking an element
         for num in nums:
             points[num] += num
@@ -19,4 +19,4 @@ class Solution:
             
             return max(max_points(num - 1), max_points(num-2) + points[num])
         
-        return max_points(max_number)
+        return max_points(max(nums))
