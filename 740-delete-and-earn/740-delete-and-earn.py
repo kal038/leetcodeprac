@@ -16,7 +16,7 @@ class Solution:
             if i > 0 and nums[i] == nums[i-1] + 1: 
                 temp = e2
                 e2 = max(curr_e + e1, e2)
-                e1 = temp
+                e1 = temp #increment e1 to where e2 once was
             else:
                 temp = e2
                 e2 = curr_e + temp 
